@@ -1,0 +1,3 @@
+				   image test
+
+tests for creating images in common lisp, using the opticl and april libraries.

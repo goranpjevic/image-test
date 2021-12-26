@@ -14,9 +14,9 @@
   ; print the average of all rgb valuse in the 'test.png' file
   (print (april:april-c "{(+/÷≢),⍵}" img)))
 
-; set position (x y) in img to val
-(defun set-position (img x y val)
-  (april:april-c "{[i;x;y;v] dim←⍴i⋄3⎕dt dim⍴(v@((1+-⍳3⊃dim)+((3⊃dim)×x+(¯1+y)×2⊃dim))),i}" img x y val))
+; set position (x y) in img to vals
+(defun set-position (img x y vals)
+  (april:april-c "{[i;x;y;v] dim←⍴i⋄3⎕dt dim⍴(v@((⍳3⊃dim)+((3⊃dim)×¯1+x+(¯1+y)×2⊃dim))),i}" img x y vals))
 
 (let ((img (april:april "3⎕dt 30 30 3⍴200")))
-    (opticl:write-png-file "test2.png" (set-position img 10 10 100)))
+    (opticl:write-png-file "test2.png" (set-position img 10 10 #(100 100 100))))

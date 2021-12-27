@@ -3,8 +3,8 @@
 (in-package #:image-test)
 
 ; create an array that represents an rgb image
-(defun create-image (width height values)
-  (april:april-c "{[w;h;v]3⎕dt w h 3⍴v}" width height values))
+(defun create-image (height width values)
+  (april:april-c "{[h;w;v]3⎕dt h w 3⍴v}" height width values))
 
 ; create a 100×100px image file named 'test.png'
 ; the rgb values of all pixels are 200

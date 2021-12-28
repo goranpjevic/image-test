@@ -1,8 +1,10 @@
+⍝ create a 3d array representing an rgb image with identical rgb values
 new←{
   [h;w;v]
   3⎕dt h w 3⍴v
 }
 
+⍝ set the values of a pixel in position (x y) to a specified value
 set_px←{
   [i;x;y;v]
   dim←⍴i

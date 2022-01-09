@@ -1,3 +1,6 @@
 				   image test
 
 tests for creating images in common lisp, using the opticl and april libraries.
+
+the 'usage/' directory contains some lisp files that show how the 'image-test'
+system can be used.
